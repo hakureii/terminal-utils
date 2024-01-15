@@ -21,18 +21,18 @@ int menu(int lenoitems, char* items[]) {
         }
 
         if (cn < 0) {
-        	cn = 0;
-        } else if (cn >= lenoitems) {
         	cn = lenoitems - 1;
+        } else if (cn >= lenoitems) {
+        	cn = 0;
         }
 
         for (int i = 0; i < lenoitems; i++) {
         	printw("| ");
             if (cn == i) {
             	// removed the old colored option method 
-            	// attron(COLOR_PAIR(1));
+            	attron(A_BOLD);
                 printw("> %-15s", items[i]);
-                // attroff(COLOR_PAIR(1));
+                attroff(A_BOLD);
             } else {
                 printw("  %-15s", items[i]);
             }
