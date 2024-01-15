@@ -29,11 +29,12 @@ int menu(int lenoitems, char* items[]) {
         for (int i = 0; i < lenoitems; i++) {
         	printw("| ");
             if (cn == i) {
-            	attron(COLOR_PAIR(1));
-                printw("%-10s", items[i]);
-                attroff(COLOR_PAIR(1));
+            	// removed the old coled option method 
+            	// attron(COLOR_PAIR(1));
+                printw("> %-15s", items[i]);
+                // attroff(COLOR_PAIR(1));
             } else {
-                printw("%-10s", items[i]);
+                printw("  %-15s", items[i]);
             }
             printw("|\n");
         }
