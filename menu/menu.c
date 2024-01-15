@@ -29,7 +29,7 @@ int menu(int lenoitems, char* items[]) {
         for (int i = 0; i < lenoitems; i++) {
         	printw("| ");
             if (cn == i) {
-            	// removed the old coled option method 
+            	// removed the old colored option method 
             	// attron(COLOR_PAIR(1));
                 printw("> %-15s", items[i]);
                 // attroff(COLOR_PAIR(1));
